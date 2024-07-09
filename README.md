@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -72,3 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 =======
 # macOs-scientific-calculator
 >>>>>>> 7147909ba41825bff660b7adec3e02604cc04fa0
+=======
+# macOs-scientific-calculator
+>>>>>>> a72ae74ed27bd2977bbd23ce65fea7939e9c9406
