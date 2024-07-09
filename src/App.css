@@ -1,38 +1,109 @@
 .App {
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  padding: 20px;
+}
+
+.app-title {
   text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.display {
+  background: #333;
+  color: #fff;
+  font-size: 2em;
+  padding: 20px;
+  text-align: right;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  grid-column: span 10;  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button-panel {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);  
+  grid-template-rows: auto;  
+  grid-gap: 1px;
+  padding: 1px;
+  background-color: #999;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-row {
+  display: contents;  
+}
+
+.button {
+  background: #444;  
+  color: #fff; 
+  border: none;
+  padding: 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+  flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button:active {
+  background: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button.number {
+  background: #555;  
+}
+
+.button:nth-child(10n) {
+  background-color: orange;
+  color: black;
+}
+
+.button-panel > .button.equals {
+  background-color: orange;
+  color: black;  
+}
+
+.button-0 {
+  grid-column: span 2;  
+}
+
+#theme-switcher-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.theme-switcher {
+  padding: 10px;
+  background: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --button-background-color: #ddd;
+  --button-text-color: #000;
+}
+
+.dark-mode {
+  --background-color: #333;
+  --text-color: #fff;
+  --button-background-color: #555;
+  --button-text-color: #fff;
 }
